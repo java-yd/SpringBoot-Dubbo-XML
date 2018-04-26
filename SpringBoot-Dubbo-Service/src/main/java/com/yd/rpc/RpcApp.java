@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @ImportResource("classpath:application-dubbo-service.xml")
 @SpringBootApplication
-@MapperScan("com.yd.mapper")    //mapper接口扫描，不写报错
+@MapperScan("com.yd.mapper")    //mapper接口扫描，不写报错，因为该类和mapper接口不在同一个包下，所以要指定
 public class RpcApp {
 	
 	public static void main(String[] args){
